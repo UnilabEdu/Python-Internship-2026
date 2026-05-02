@@ -106,6 +106,6 @@ git push origin <add-your-branch-name>
 
 ## რესურსები
 
-git-ის ოფიციალური დოკუმენტაცია: https://git-scm.com/doc​
+git-ის ოფიციალური დოკუმენტაცია: https://git-scm.com/docs
 
 git -ის სრული კურსი: https://youtu.be/RGOj5yH7evk
