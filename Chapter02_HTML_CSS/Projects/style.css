@@ -1,0 +1,54 @@
+h1 {
+    color: #1835f1;
+}
+
+body {
+    background-color: azure;
+}
+
+.for-text {
+    font-size: 20px;
+}
+
+.text-color {
+    color: purple;
+}
+
+#information {
+    background-color: white;
+
+    border: 4px #ff915e solid;
+    border-radius: 10px;
+}
+
+button{
+    color:red;
+    transition: color 2s;
+}
+
+button:active{
+    color:yellow;
+}
+
+button:hover{
+    color:blue;
+}
+
+a:link{
+    color:red;
+}
+
+a:visited{
+    color:blue;
+}
+
+.text-input{
+    color:blue;
+    margin: 5px;
+    padding: 5px;
+}
+
+.date-input{
+    color:red;
+    margin: 2px;
+}
