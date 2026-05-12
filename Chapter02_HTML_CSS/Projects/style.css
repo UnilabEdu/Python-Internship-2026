@@ -1,0 +1,49 @@
+h1{
+    color: blue;
+}
+
+.for_text{
+    font-size: 20px;
+}
+
+.text.color{
+    color: purple;
+}
+
+
+#information{
+    background-color: greenyellow;
+    border: 7px sienna solid;
+    border-radius: 10px;
+}
+
+p{
+    color: red;
+     transition: color 2s ;
+}
+button:active{
+    color: darkred;
+   
+}
+button:hover{
+    color: aqua;
+
+}
+a:link{
+    color: red;
+}
+a:visited{
+    color: blue;
+}
+
+
+.text-input{
+    color: red;
+    margin: 5px;
+    
+}
+.date-input{
+    color: blue;
+    margin: 5px;
+    
+}
