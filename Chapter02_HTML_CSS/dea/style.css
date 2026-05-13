@@ -1,0 +1,45 @@
+body {
+    background-color: #f7eef6;
+}
+
+h1{
+    color: #075099
+}
+
+h3,h4{
+    color:#6d1eaf
+}
+h2{
+    color:#ab6fdc;}
+a{
+    color:#ab6fdc;
+    text-decoration: none;
+}
+a:hover{
+    color:#f7afbe
+}
+.horrses{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.horse-pic{
+    text-align: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+button[type="submit"]{
+   background-color: #6d1eaf; 
+   color: white;
+   border: none;
+   padding: 12px 24px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: all 0.3 ease;
+}
+button[type="submit"]:hover{
+    background-color: #8d065e;
+    transform: scale(1.05);
+}

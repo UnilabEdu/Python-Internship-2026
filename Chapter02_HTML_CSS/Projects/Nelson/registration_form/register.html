@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Registration Form</h1>
+
+    <p>
+        Complete the form below.
+    </p>
+</header>
+
+<a class="back-button" href="../portfolio/index.html">
+    ← Back to Portfolio
+</a>
+
+<main>
+
+    <form>
+
+        <fieldset>
+
+            <legend>User Registration</legend>
+
+            <label for="username">Username:</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter username"
+                required
+            >
+
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter email"
+                required
+            >
+
+            <br><br>
+
+            <label for="password">Password:</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                required
+            >
+
+            <br><br>
+
+            <label for="birthdate">Birth Date:</label>
+            <input
+                type="date"
+                id="birthdate"
+            >
+
+            <br><br>
+
+            <label>Experience Level:</label>
+
+            <br>
+
+            <input type="radio" name="level">
+            Beginner
+
+            <br>
+
+            <input type="radio" name="level">
+            Intermediate
+
+            <br><br>
+
+            <label>Technologies:</label>
+
+            <br>
+
+            <input type="checkbox">
+            HTML
+
+            <br>
+
+            <input type="checkbox">
+            CSS
+
+            <br>
+
+            <input type="checkbox">
+            Python
+
+            <br><br>
+
+            <label for="country">Country:</label>
+
+            <select id="country">
+
+                <option>Georgia</option>
+                <option>Armenia</option>
+                <option>Other</option>
+
+            </select>
+
+            <br><br>
+
+            <textarea
+                rows="5"
+                cols="40"
+                placeholder="Tell something about yourself"
+            ></textarea>
+
+            <br><br>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </fieldset>
+
+    </form>
+
+</main>
+
+</body>
+
+</html>
