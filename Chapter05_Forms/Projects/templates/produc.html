@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<main class="m-4">
+    <div class="card mb-3 shadow" style="max-width: 1500px;">
+        <div class="row g-0 p-3">
+            <div class="col-md-4">
+                <img src="{{ piano.img }}" class="img-fluid rounded-start"
+                     alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">{{ piano.name }}</h5>
+                    <p class="card-text">₾{{ piano.price }}</p>
+                    <ul>
+                        <li>
+                            კლავიშების რაოდენობა : 88
+                        </li>
+                        <li>
+                            ფერი : შავი
+                        </li>
+                        <li>
+                            კლავიშების ტიპი : სრული ზომა, Scaled Hammer Action Keyboard II, Tri-sensor, Ivory Touch
+                        </li>
+                    </ul>
+
+                    <a href="#" class="btn btn-dark">შეძენა</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
