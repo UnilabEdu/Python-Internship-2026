@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block main %}
+<main class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 card p-4 shadow">
+            
+            <nav class="mb-3">
+                <a href="register.html" class="text-decoration-none">
+                    <h5 class="text-muted">↩ უკან დაბრუნება</h5>
+                </a>
+            </nav>
+
+            <h2 class="text-center mb-4">შინაური ცხოველების აღრიცხვა: ცხოველის მფლობელის რეგისტრაცია</h2>
+            
+            <div class="text-center mb-4">
+                <img src="Picture1.png" alt="მფლობელი" class="img-fluid" style="max-height: 150px;">
+            </div>
+            
+            <h4 class="text-secondary mb-4">გთხოვთ, შეიყვანეთ მითითებული ინფორმაცია:</h4>
+            
+            <form>
+                <div class="mb-3">
+                    <label class="form-label fw-bold">თქვენი სახელი</label>
+                    <input type="text" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">თქვენი გვარი</label>
+                    <input type="text" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">დაბადების თარიღი</label>
+                    <input type="date" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">ელ.ფოსტის მისამართი</label>
+                    <input type="email" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">ქალაქი</label>
+                    <select class="form-select">
+                        <option>თბილისი</option>
+                        <option>ბათუმი</option>
+                        <option>ქუთაისი</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">საცხოვრებელი მისამართი</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">შეიყვანეთ პაროლი</label>
+                    <input type="password" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">გაიმეორეთ პაროლი</label>
+                    <input type="password" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label d-block fw-bold">სქესი</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderF" required>
+                        <label class="form-check-label" for="genderF">მდედრობითი</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="genderM">
+                        <label class="form-check-label" for="genderM">მამრობითი</label>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">გვიამბეთ თქვენს შესახებ</label>
+                    <textarea class="form-control" rows="3" placeholder="შეგიძლია გვიამბო შენს შესახებ..."></textarea>
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                    <label class="form-check-label" for="exampleCheck1">ვეთანხმები წესებს და პირობებს</label>
+                </div>
+
+                <div id="emailHelp" class="form-text mb-3 text-success">✔ თქვენი მონაცემები კონფიდენციალურია</div>
+                <button type="submit" class="btn btn-primary w-100">რეგისტრაცია</button>
+            </form>
+
+        </div>
+    </div>
+</main>
+{% endblock %}
