@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template,url_for
+from flask import Flask, render_template,url_for,request
 app = Flask(__name__)
 
 @app.route("/")
@@ -23,6 +23,12 @@ def register_owner():
 @app.route("/register")
 def register():
     return  render_template("register.html")
+
+
+@app.route("/questions")
+def questions():
+    return  render_template("questions.html")
+
 
 
 

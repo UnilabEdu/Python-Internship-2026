@@ -1,24 +1,25 @@
 {% extends "base.html" %}
 
-{% block main %}
+{% block header %}
+
 <main class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-8 card p-4 shadow">
-            
+
             <nav class="mb-3">
-                <a href="register.html" class="text-decoration-none">
+                <a href="{{ url_for('register') }}" class="text-decoration-none">
                     <h5 class="text-muted">↩ უკან დაბრუნება</h5>
                 </a>
             </nav>
 
             <h2 class="text-center mb-4">შინაური ცხოველების აღრიცხვა: ცხოველის მფლობელის რეგისტრაცია</h2>
-            
+
             <div class="text-center mb-4">
-                <img src="Picture1.png" alt="მფლობელი" class="img-fluid" style="max-height: 150px;">
+                <img src="{{ url_for('static', filename='Picture1.png') }}" alt="მფლობელი" class="img-fluid"
+                    style="max-height: 150px;">
             </div>
-            
             <h4 class="text-secondary mb-4">გთხოვთ, შეიყვანეთ მითითებული ინფორმაცია:</h4>
-            
+
             <form>
                 <div class="mb-3">
                     <label class="form-label fw-bold">თქვენი სახელი</label>

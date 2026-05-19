@@ -11,59 +11,24 @@
 </head>
 
 <body class="container-fluid text-center">
-    <nav class="navbar navbar-expand-lg bg-success fixed-top" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">შინაური ცხოველების აღრიცხვა</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="{{ url_for('about') }}">ჩვენს შესახებ </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ url_for('register') }}">რეგისტრაცია</a>
-                    </li>
-                </ul>
+    {% include 'navbar.html' %}
+
+    {% block header%}
+    {% endblock %}
+
+   
+
+    {% block content %}{% endblock %}
+
+    <footer id="bottom" class="bg-light text-center py-4 mt-5 border-top">
+        <a href="{{ url_for('questions') }}">
+            <div class="text-bg-success p-3">
+                ხშირად დასმული კითხვები
             </div>
-        </div>
-    </nav>
-    <div class="container text-center" style="margin-top: 80px;">
-        <div class="row">
-            <div class="col-3">
-                <h5>იზრუნეთ უკეთესად</h5>
-            </div>
-            <div class="col-3">
-                <h5>იზრუნეთ მარტივად</h5>
-            </div>
-            <div class="col-3">
-                <h5>დაზოგეთ დრო</h5>
-            </div>
-            <div class="col-3">
-                <h5>გვენდეთ</h5>
-            </div>
-        </div>
-    </div>  
+        </a>
+        <div class="text-bg-warning p-3">კონტაქტიr</div>
 
-{% block header%}
-{% endblock %}
-
-
-
-
-<footer id="bottom" class="bg-light text-center py-4 mt-5 border-top">
-    <a href="FAQ.html">
-        <div class="text-bg-success p-3">
-            ხშირად დასმული კითხვები
-        </div>
-    </a>
-    <div class="text-bg-warning p-3">კონტაქტიr</div>
-
-</footer>
+    </footer>
 </body>
 
 </html>
-
