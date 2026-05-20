@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<main class="m-4 p-4 shadow">
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">სახელი</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">პაროლი</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword2" class="form-label">გაიმეორე პაროლი</label>
+            <input type="password" class="form-control" id="exampleInputPassword2">
+        </div>
+        <select class="form-select mb-3" aria-label="აირჩიე ქვეყანა">
+            <option selected>აირჩიე ქვეყანა</option>
+            <option value="1">საქართველო</option>
+            <option value="2">გერმანია</option>
+            <option value="3">იტალია</option>
+        </select>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">დამიმახსოვრე</label>
+        </div>
+        <button type="submit" class="btn btn-dark">register</button>
+    </form>
+</main>
+{% endblock %}

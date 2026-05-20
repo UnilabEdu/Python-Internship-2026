@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ka">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ცხოველის რეგისტრაცია</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+
+</head>
+
+<body class="container-fluid text-center">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-success fixed-top" data-bs-theme="dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">შინაური ცხოველების აღრიცხვა</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            ჩვენს შესახებ
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="register.html">
+                            რეგისტრაცია
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="m-4 p-5 shadow">
+
+        <nav>
+            <a href="index.html">
+                <h3>უკან დაბრუნება</h3>
+            </a>
+        </nav>
+
+        <h2>შინაური ცხოველების აღრიცხვა: ცხოველის რეგისტრაცია</h2>
+
+        <img src="Picture2.png" alt="" class="img-fluid">
+
+        <h3>გთხოვთ, შეიყვანეთ მითითებული ინფორმაცია:</h3>
+
+        <form>
+
+            <label>
+                <input type="radio" name="animal">
+                ძაღლი
+            </label>
+
+            <label>
+                <input type="radio" name="animal">
+                კატა
+            </label>
+
+            <label>
+                <input type="radio" name="animal">
+                ზაზუნა
+            </label>
+
+            <br><br>
+
+            <div class="mb-3">
+                <label class="form-label">სახელი</label>
+
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">ასაკი</label>
+
+                <input type="number" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">დაბადების თარიღი</label>
+
+                <input type="date" class="form-control">
+            </div>
+
+            <div>
+                <label>მდედრობითი</label>
+                <input type="radio" name="gender">
+
+                <label>მამრობითი</label>
+                <input type="radio" name="gender">
+            </div>
+
+            <br>
+
+            <button class="btn btn-danger">
+                რეგისტრაცია
+            </button>
+
+        </form>
+
+    </main>
+
+    <footer id="bottom" class="bg-light text-center py-4 mt-5 border-top">
+        <a href="FAQ.html">
+            <div class="text-bg-success p-3">
+                ხშირად დასმული კითხვები
+            </div>
+        </a>
+        <div class="text-bg-warning p-3">კონტაქტიr</div>
+
+    </footer>
+</body>
+
+</html>

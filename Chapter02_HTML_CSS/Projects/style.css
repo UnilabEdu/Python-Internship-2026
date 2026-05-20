@@ -1,54 +1,49 @@
-h1 {
-    color: #1835f1;
+h1{
+    color: blue;
 }
 
-body {
-    background-color: azure;
-}
-
-.for-text {
+.for_text{
     font-size: 20px;
 }
 
-.text-color {
+.text.color{
     color: purple;
 }
 
-#information {
-    background-color: white;
 
-    border: 4px #ff915e solid;
+#information{
+    background-color: greenyellow;
+    border: 7px sienna solid;
     border-radius: 10px;
 }
 
-button{
-    color:red;
-    transition: color 2s;
+p{
+    color: red;
+     transition: color 2s ;
 }
-
 button:active{
-    color:yellow;
+    color: darkred;
+   
 }
-
 button:hover{
-    color:blue;
-}
+    color: aqua;
 
+}
 a:link{
-    color:red;
+    color: red;
+}
+a:visited{
+    color: blue;
 }
 
-a:visited{
-    color:blue;
-}
 
 .text-input{
-    color:blue;
+    color: red;
     margin: 5px;
-    padding: 5px;
+    
 }
-
 .date-input{
-    color:red;
-    margin: 2px;
+    color: blue;
+    margin: 5px;
+    
 }
