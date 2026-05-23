@@ -1,0 +1,54 @@
+
+{% from "macros.html" import render_product %}
+{% extends "base.html" %}
+
+
+{% block header %}
+
+
+<header>
+  
+  
+    <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://usa.yamaha.com/files/Grands_Banner_1920px_1ee33fcaec559d8c286d2ad567055166.jpg"
+class="d-block w-100"
+alt="Yamaha piano">
+    </div>
+    <div class="carousel-item">
+      <img src="https://usa.yamaha.com/files/Digital_Banner_1920px_75d88076f035cd0f400713593d195526.jpg" class="d-block w-100" alt="https://musikis-saxli.ge/image/cache/catalog/products/94192-800x800.jpg">
+    </div>
+    <div class="carousel-item">
+      <img src="https://usa.yamaha.com/files/Uprights_Banner_1920px_d5604bfeec2eb29425307aa05b3f7bbd.jpg" class="d-block w-100" alt="https://musikis-saxli.ge/image/cache/catalog/products/94192-800x800.jpg">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</header>
+{% endblock %}
+
+{% block main %}
+<main>
+<h1 class="display-4 mx-3 mt-3 mb-5">{{ title  | title}}</h1>
+<div class="container text-center"></div>
+
+  <div class="row">
+
+       {% for product in products %}
+          {{ render_product(product) }}
+    {% endfor %}
+
+      </div>
+    </div>
+
+  </main>
+{% endblock %}
+  

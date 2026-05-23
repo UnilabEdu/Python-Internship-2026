@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block main %}
+
+<main class="container my-5 " >
+  <div class="card shadow border-0 p-4 bg-light">
+    <div class="row g-4 align-items-center">
+
+
+<div class="col-md-6 text-center">
+        <img src="{{ piano.img }}" class="img-fluid rounded" alt="პიანინო" style="max-height: 350px; object-fit: contain;">
+      </div>
+<div class="col-md-6">
+        <div class="card-body p-0"> <h5 class="card-title h2 fw-bold mb-3">{{ piano.name }}</h5>
+          <p class="card-text h4 text-success mb-4">ლ{{ piano.price }}</p>
+
+          <h6 class="text-muted mb-3 fw-bold">პროდუქტის მახასიათებლები:</h6>
+   <ul class="list-unstyled d-flex flex-wrap gap-2">
+    <li class="p-2 bg-light border rounded small">🎹 კლავიშების რაოდენობა : 88</li>
+    <li class="p-2 bg-light border rounded small">🔨 კლავიშების ტიპი : სრული ზომა</li>
+    <li class="p-2 bg-light border rounded small">🎶 პოლიფონია : 192 ნოტი</li>
+    <li class="p-2 bg-light border rounded small">✨ ეფექტები : 4 x Reverb</li>
+    <li class="p-2 bg-light border rounded small">🎵 რიტმი/ტონი</li>
+    <li class="p-2 bg-light border rounded small">🎧 ყურსასმენის დაკავშირება : კი</li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+</main>
+
+{% endblock %}
