@@ -1,0 +1,31 @@
+h1{
+    color: white;
+}
+
+body{
+    background-color: darkmagenta;
+}
+
+p{
+    color: black;
+}
+
+p.active{
+    color: yellow;
+}
+
+.for-text{
+    font-size: 20px;
+}
+
+.text-color{
+    color: yellow;
+}
+
+a:link{
+    color: red;
+}
+
+a.visited{
+    color:yellow;
+}
