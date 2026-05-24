@@ -3,15 +3,6 @@
 {% block main %}
 <main class="m-4 p-4 shadow">
     <form method="post" enctype="multipart/form-data">
-        {% for errors in form.errors.values() %}
-        {% for error in errors %}
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            {{ error }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-        {% endfor %}
-        {% endfor %}
-
         {{ form.hidden_tag() }}
         <div class="mb-3">
             {{ form.name.label(class="form-label") }}

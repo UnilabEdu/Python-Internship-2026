@@ -7,8 +7,6 @@
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text">₾{{ product.price }}</p>
             <a href="{{ url_for('product', id=product.id ) }}" class="btn btn-dark">ნახვა</a>
-            <a href="{{ url_for('edit', id=product.id ) }}" class="btn btn-warning">შეცვლა</a>
-            <a href="{{ url_for('delete', id=product.id ) }}" class="btn btn-danger">წაშლა</a>
         </div>
     </div>
 </div>
