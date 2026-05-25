@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block main %}
+
+<main class= "m-4 p-4 shadow" >
+<form>
+  <div class="mb-3">
+    <label for="name" class="form-label">სახელი</label>
+    <input type="email" class="form-control" id="name" aria-describedby="emailHelp"> 
+  </div>
+
+    <div class="mb-3">
+    <label for="price" class="form-label">ფასი</label>
+    <input type="email" class="form-control" id="price" aria-describedby="emailHelp"> 
+  </div>
+
+    <select class="form-select mb-4" aria-label="Default select example">
+  <option selected>აირჩიე კატეგორია</option>
+  <option value="1">როიალი</option>
+  <option value="2">პიანინო</option>
+  <option value="3">დრამი</option>
+</select>
+         <div class="mb-3">
+        <label for="formFile" class="form-label">ატვირთე ფოტო</label>
+        <input class="form-control" type="file" id="formFile">
+    </div>
+ 
+
+  <button type="submit" class="btn btn-dark">დამატება</button>
+</form>
+</main>
+{% endblock %}
