@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block main %}
+
+<h3 class="">{% if patient %} პაციენტის რედაქტირება {% else %} ახალი პაციენტის დამატება {% endif %}</h3>
+<main class= "m-4 p-4 shadow" >
+  <form method="POST" action="" enctype="multipart/form-data">
+
+  
+  {{ form.hidden_tag() }}
+  <div class="mb-3">
+    {{ form.name.label(class="form-label") }}
+    {{ form.name(class="form-control") }}
+   
+  </div>
+
+  <div class="mb-3">
+    {{ form.id_number.label(class="form-label") }}
+    {{ form.id_number(class="form-control") }}
+   
+  </div>
+
+   <div class="mb-3">
+      {{ form.age.label(class="form-label") }}
+      {{ form.age(class="form-control") }}
+   
+  </div>
+   
+  <div class="mb-3">
+      {{ form.gender.label(class="form-label") }}
+      {{ form.gender(class="form-select") }}
+   
+  </div>
+
+     <div class="mb-3">
+      {{ form.img.label(class="form-label") }}
+      {{ form.img(class="form-control") }}
+   
+  </div>
+
+       <div class="mb-3">
+
+      {{ form.submit(class="btn btn-dark") }}
+   
+  </div>
+
+</form>
+</main>
+{% endblock %}
