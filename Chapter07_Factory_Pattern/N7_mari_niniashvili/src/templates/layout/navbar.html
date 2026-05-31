@@ -1,0 +1,24 @@
+
+ {% from 'macros.html' import nav_link %}
+
+
+<body class="container-lg">
+    <nav class="navbar navbar-expand-lg bg-secondary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ url_for('main.index') }}">კლინიკა</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      {{ nav_link("main.index", "სახლი") }}
+       {{ nav_link("patient.patients_list", "პაციენტები") }}
+        {{ nav_link("patient.create", "პაციენტის დამატება") }}
+   
+ 
+    </ul>
+      <a href="{{ url_for('auth.users_list') }}" class="btn btn-success">პერსონალის სია</a>
+      <a href="{{ url_for('auth.register') }}" class="btn btn-success">პერსონალის რეგისტრაცია</a>
+    </div>
+  </div>
+</nav>
