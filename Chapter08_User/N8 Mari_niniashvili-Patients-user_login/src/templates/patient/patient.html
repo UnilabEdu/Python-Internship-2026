@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block main %}
+
+<main class="container my-5">
+  <div class="card shadow border-0 p-4 bg-light">
+    <div class="row g-4 align-items-center">
+
+      <div class="col-md-6 text-center">
+        <img src="{{ patient.img }}" class="img-fluid rounded" alt="პაციენტი" style="max-height: 350px; object-fit: contain;">
+      </div>
+
+      <div class="col-md-6">
+        <div class="card-body p-0"> 
+          <h5 class="card-title h2 fw-bold mb-4">{{ patient.name }}</h5>
+
+          <h6 class="text-muted mb-3 fw-bold">პაციენტის მონაცემები:</h6>
+          <ul class="list-unstyled d-flex flex-wrap gap-2">
+            <li class="p-2 bg-light border rounded small">სახელი: {{ patient.name }}</li>
+            <li class="p-2 bg-light border rounded small">პირადი ნომერი: {{ patient.id_number }}</li>
+            <li class="p-2 bg-light border rounded small">ასაკი: {{ patient.age }}</li>
+            <li class="p-2 bg-light border rounded small">სქესი: {{ patient.gender }}</li>
+            <li class="p-2 bg-light border rounded small">ქალაქი: {{ patient.city }}</li>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
