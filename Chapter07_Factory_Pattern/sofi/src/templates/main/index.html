@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import render_photo %}
+
+{% block header %}
+<header>
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://scontent.ftbs6-2.fna.fbcdn.net/v/t1.15752-9/691866875_950021594310447_592925388319445806_n.png?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=a5eWuUfyuVoQ7kNvwFmgS8D&_nc_oc=AdqEoUY5lERiJFm0VKVpG9EZ5pR53uXGtCNgz1slyD5vg76McIK8eQF_TyRTvibopgE&_nc_zt=23&_nc_ht=scontent.ftbs6-2.fna&_nc_ss=7b2a8&oh=03_Q7cD5QH3Mg-BB5yIg7yrEtLSGGPWbWFGEiA_X569Gv-xaywaqA&oe=6A2FCEA4"
+                     class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://scontent.ftbs6-2.fna.fbcdn.net/v/t1.15752-9/673383461_1658137258764917_2141969696607119607_n.png?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=21aXtjquVdgQ7kNvwEQNPt0&_nc_oc=AdpIA_CWbyd4weFMHDlgkqqk9wkOOgOa1UzIZVaOGcDY8J4SBy2bozOjHp4VxSHtYXM&_nc_zt=23&_nc_ht=scontent.ftbs6-2.fna&_nc_ss=7b2a8&oh=03_Q7cD5QEbEbG0M1AGvbDsUfmwqXD4jEBpRs6-8L4GvoEo06SwbA&oe=6A2FBE18"
+                     class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://scontent.ftbs6-2.fna.fbcdn.net/v/t1.15752-9/700134059_995602329783827_8641193934597573164_n.png?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=lW1fEVdRq_QQ7kNvwH1PfTu&_nc_oc=AdqAnBz9uT1BdsQACPf0amZALtJexrmggQykqtti3qBAaDlkKOoOMbAzb2x-35zwZfA&_nc_zt=23&_nc_ht=scontent.ftbs6-2.fna&_nc_ss=7b2a8&oh=03_Q7cD5QFxaSFm8StQoWKn-xWtIyRU5aVSuhV3Ovl2KwKd12T5yQ&oe=6A2FDAEA"
+                     class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</header>
+{% endblock %}
+
+{% block main %}
+<main>
+    <h1 class="display-4 mx-3 mt-3 mb-5">{{ title }}</h1>
+    <div class="container text-center">
+        <div class="row">
+            {% for photo in photos %}
+                {{ render_photo(photo) }}
+            {% endfor %}
+    </div>
+    </div>
+</main>
+{% endblock %}
