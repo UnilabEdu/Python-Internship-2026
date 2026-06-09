@@ -1,0 +1,24 @@
+{% macro render_product(product) %}
+<div class="col my-3">
+    <div class="card px-3" style="width: 18rem;">
+        <img src="{{ url_for('static', filename=product.img) }}" class="card-img-top"
+             alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">₾{{ product.price }}</p>
+            <a href="{{ url_for('prod.product', id=product.id ) }}" class="btn btn-dark">ნახვა</a>
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('prod.edit', id=product.id ) }}" class="btn btn-warning">შეცვლა</a>
+                <a href="{{ url_for('prod.delete', id=product.id ) }}" class="btn btn-danger">წაშლა</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+{% macro nav_link(route, name) %}
+<li class="nav-item">
+    <a class="nav-link {% if request.path == url_for(route) %} active {% endif %}" aria-current="page"
+       href="{{ url_for(route) }}">{{ name }}</a>
+</li>
+{% endmacro %}

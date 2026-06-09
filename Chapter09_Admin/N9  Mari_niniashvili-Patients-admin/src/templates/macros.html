@@ -1,0 +1,32 @@
+
+    {% macro render_patient(patient) %}
+    
+    <div class="col my-3">
+
+  <div class="card px-2" style="width: 18rem;">
+     <img src="/static/uploads/{{ patient.img }}" class="card-img-top">
+    <div class="card-body">
+      <p class="card-title"> სახელი,გვარი: {{ patient.name }}</p>
+      <p class="card-text">პირადი ნომერი: {{ patient.id_number }}</p>
+      <!-- <p class="card-text">{{ patient.age }}</p>
+      <p class="card-text">{{ patient.gender }}</p> -->
+
+      <a href="{{ url_for('pat.patient', id=patient.id) }}" class="btn btn-success btn-sm">ნახვა</a>
+    {% if current_user.is_authenticated %}
+      <a href="{{ url_for('pat.update', id=patient.id) }}" class="btn btn-warning btn-sm">რედაქტირება</a>   
+      <a href="{{ url_for('pat.delete', id=patient.id) }}" class="btn btn-danger btn-sm">წაშლა</a>
+    {% endif %}     
+
+
+</div>
+      </div>
+    </div> 
+    {% endmacro %}
+
+     {% macro nav_link(route,name) %}
+
+    <li class="nav-item">
+     
+          <a class="nav-link {% if request.path == url_for(route) %}active{% endif %}"aria-current="page"href="{{ url_for(route) }}">{{name}}</a>
+        </li>    
+    {% endmacro %}

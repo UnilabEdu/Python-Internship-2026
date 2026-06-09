@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block main %}
+<main>
+<h1 class="display-4 mx-3 mt-3 mb-5">{{ title | title }}</h1>
+<div class="container text-center">
+  <div class="row">
+
+    {# ციკლით ვუვლით სადაზღვევოებს და ბარათის დიზაინს პირდაპირ აქ ვწერთ #}
+    {% for ins in insurances_list %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-primary fw-bold mb-3">{{ ins.insurance }}</h5>
+                <hr>
+                <p class="card-text text-start ms-2"><strong>საიდენტიფიკაციო:</strong> {{ ins.id_number }}</p>
+                <p class="card-text text-start ms-2"><strong>ქალაქი:</strong> {{ ins.city }}</p>
+                <p class="card-text text-start ms-2 mb-4"><strong>მისამართი:</strong> {{ ins.address }}</p>
+                
+                <div class="d-flex justify-content-center gap-2">
+                    <a href="#" class="btn btn-success btn-sm">ნახვა</a>
+
+                    {% if current_user.is_authenticated  %}
+                    <a href="#" class="btn btn-warning btn-sm">რედაქტირება</a>
+                
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</div>
+</main>
+{% endblock %}

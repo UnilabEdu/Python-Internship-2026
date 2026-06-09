@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<main class="m-4 p-4 shadow">
+    <form method="post">
+        {% for errors in form.errors.values() %}
+        {% for error in errors %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ error }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endfor %}
+
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-control") }}
+        </div>
+        <div class="mb-3">
+            {{ form.password.label(class="form-label") }}
+            {{ form.password(class="form-control")}}
+        </div>
+        <div class="mb-3">
+            {{ form.password2.label(class="form-label") }}
+            {{ form.password2(class="form-control")}}
+        </div>
+        <div class="mb-3">
+            {{ form.countre.label(class="form-label") }}
+            {{ form.countre(class="form-select") }}
+        </div>
+        <div class="mb-3 form-check">
+            {{ form.remember_me(class="form-check-input") }}
+            {{ form.remember_me.label(class="form-check-label") }}
+        </div>
+        {{ form.submit(class="btn btn-dark") }}
+    </form>
+</main>
+{% endblock %}
