@@ -1,0 +1,56 @@
+{% from "macros.html" import render_patient with context %}
+{% extends "base.html" %}
+
+{% block header %}
+<h3>This is a demo version</h3>
+
+<header>
+    <div class="container my-5">
+        <div class="row g-4 align-items-center justify-content-center">
+
+            <div class="col-md-6">
+                <div class="p-4 bg-white rounded shadow-sm border">
+                    <img src="https://www.bigscal.com/wp-content/uploads/2023/12/Why-are-Hospitals-Important-1030x457.webp"
+                         class="img-fluid rounded w-100"
+                         alt="Why Hospitals Are Important"
+                         style="max-height: 200px; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="p-4 bg-white rounded shadow-sm border">
+                    <img src="https://hospicefoundation.ie/wp-content/uploads/2025/05/irish-hospice-foundation-hospice-friendly-hospitals.jpg"
+                         class="img-fluid rounded w-100"
+                         alt="Hospice Friendly Hospitals"
+                         style="max-height: 200px; object-fit: cover;">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="p-4 bg-white rounded shadow-sm border">
+                    <img src="https://www.voronoiapp.com/_next/image?url=https%3A%2F%2Fcdn.voronoiapp.com%2Fpublic%2Fimages%2Fa4c9cd37-d9b4-490e-972f-b62756fb2e33.webp&w=1200&q=85"
+                         class="img-fluid rounded w-100"
+                         alt="Health Data Visualization"
+                         style="max-height: 200px; object-fit: cover;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block main %}
+<main>
+    <h1 class="display-4 mx-3 mt-3 mb-5">{{ title }}</h1>
+
+    <div class="container text-center">
+        <div class="row">
+            {# Patients list #}
+            {% for patient in patients %}
+                {{ render_patient(patient) }}
+            {% endfor %}
+        </div>
+    </div>
+</main>
+{% endblock %}
